@@ -1,12 +1,6 @@
-/**
- * 
- */
 package it.vincenzopicone.be.godfather.model;
 
-/**
- * @author gabri
- *
- */
+
 public class ToppingCheese extends PizzaTopping {
 
 	public ToppingCheese(Pizza pizza) {
