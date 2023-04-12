@@ -37,11 +37,11 @@ public class NuovoOrdine implements CommandLineRunner{
 		O1.setStatoOrdine(StatoOrdine.IN_CORSO);
 		O1.setNumeroOrdine(1);
 		O1.setOraOrdine(LocalTime.of(12, 55));
-		O1.setTotaleCoperti(4);
+		O1.setTotaleCoperti(4d);
 		O1.setNota("Una margherita senza mozzarella");
 		O1.setListaOrdine(ordine1);
 		O1.setTavolo(new Tavolo1());
-		O1.setTotaleOrdine(calcolaConto(ordine1));
+		//O1.setTotaleOrdine(calcolaConto(ordine1));
 		System.out.println("Numero ordine: " + O1.getNumeroOrdine());
 		System.out.println("Ora ordine: " + O1.getOraOrdine());
 		System.out.println("Note: " + O1.getNota());
@@ -61,12 +61,14 @@ public class NuovoOrdine implements CommandLineRunner{
 		    ordine.stream().forEach(x -> System.out.println(x.getPrice() + " €" + " " + x.getName()));
 	}
 	
-	public static Double calcolaConto (List<MenuItem> ordine) {
-		Double conto = 0d;
-		ordine.stream().map(x->x.getPrice());
-		
-		return conto;
-	}
+//	public static Double calcolaConto (List<MenuItem> ordine) {
+//		Double conto = 0d;
+//		for (int i = 0; i < ordine.size(); i++) {
+//			conto = conto + ordine.get(i).getPrice();
+//		}
+//		//conto = conto + (ncoperti * costoCoperto);
+//		return conto;
+//	}
 	
 	
 

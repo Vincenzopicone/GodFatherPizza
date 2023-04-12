@@ -18,10 +18,10 @@ import lombok.NoArgsConstructor;
 public class Ordine {
 	
 	private int numeroOrdine;
-	@Value("${ordine.persone.tavolo}") private int coperto;
+	private Double coperto = 1d;
 	private StatoOrdine statoOrdine;
 	private List<MenuItem> listaOrdine;
-	private int totaleCoperti;
+	private Double totaleCoperti;
 	private Tavolo tavolo;
 	private LocalTime oraOrdine;
 	private String nota;
